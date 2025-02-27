@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = 'I actually use key in my demonstration, left empty here for safety purposes regarding OpenAI rules';
 
 /**
   * Fetches AI-generated weather advice from OpenAI API after feeding it weather data from our other API
