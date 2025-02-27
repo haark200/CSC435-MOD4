@@ -1,9 +1,14 @@
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = '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';
 
+/**
+  * Fetches AI-generated weather advice from OpenAI API after feeding it weather data from our other API
+  * @param {Object} weatherData - The weather data object
+  * @returns {string} - AI-generated weather advice
+*/
 export async function getWeatherAdvice(weatherData) {
   console.log('Fetching AI advice...');
   
-  const prompt = `The weather in ${weatherData.name} is ${weatherData.weather[0].description} with a temperature of ${weatherData.main.temp}°C. Give a friendly weather tip.`;
+  const prompt = `The weather in ${weatherData.name} is ${weatherData.weather[0].description} with a temperature of ${weatherData.main.temp}°F. Give a friendly weather tip.`;
 
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -20,7 +25,7 @@ export async function getWeatherAdvice(weatherData) {
     });
 
     const data = await response.json();
-    console.log('AI Full Response:', data); // Log full response to debug
+    console.log('AI Full Response:', data)
 
     // Handle "Insufficient Quota" error
     if (data.error?.code === 'insufficient_quota') {

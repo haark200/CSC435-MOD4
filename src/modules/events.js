@@ -2,6 +2,9 @@ import { fetchWeather } from './api.js';
 import { updateWeatherUI, showError } from './ui.js';
 import { getWeatherAdvice } from './ai.js';
 
+/**
+  * Event listeners from user interaction
+*/
 export function setupEventListeners() {
   document.querySelector('#search-form').addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -12,7 +15,7 @@ export function setupEventListeners() {
       const weatherData = await fetchWeather(city);
       updateWeatherUI(weatherData);
       
-      // Add event listener for AI advice button
+      // AI advice event listener
       document.querySelector('#get-ai-advice').addEventListener('click', async () => {
         const advice = await getWeatherAdvice(weatherData);
         document.querySelector('#weather-output').innerHTML += `<p><strong>AI Advice:</strong> ${advice}</p>`;
