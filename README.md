@@ -7,4 +7,4 @@
 - Then, if succesful, information regarding said city will display including the temperature and conditions.
 - You then can click on the AI advice button to get an understand of what AI thinks about the weather which may include driving conditions or appropriate clothing.
 # Screencast Code Walkthrough
-Link: 
+Link: https://youtu.be/Rc2vi5ffaSM
