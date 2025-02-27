@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+h1 {
+    color: #fff;
+}
+
+/* Search Form */
+#search-form {
+    background: grey;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#city-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Weather Output */
+#weather-output {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* AI Advice Button */
+#get-ai-advice {
+    margin-top: 10px;
+    background: #28a745;
+}
+
+#get-ai-advice:hover {
+    background: #1e7e34;
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    font-weight: bold;
+}
